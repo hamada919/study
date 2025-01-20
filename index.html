@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM01 Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SM01 Questions</h1>
+        </div>
+
+        <div class="file-upload-section">
+            <label for="json-file" class="file-upload-label">
+                <span class="upload-icon"></span>
+                Select Questions File
+            </label>
+            <input type="file" id="json-file" accept=".json">
+            <span id="file-name"></span>
+        </div>
+
+        <div class="settings-section">
+            <div class="setting-item">
+                <label for="question-time-setting">Question Time (s):</label>
+                <input type="number" id="question-time-setting" value="30">
+            </div>
+            <div class="setting-item">
+                <label for="explanation-time-setting">Explanation Time (s):</label>
+                <input type="number" id="explanation-time-setting" value="60">
+            </div>
+            <button id="apply-settings-btn" class="apply-button">Apply</button>
+        </div>
+
+        <div class="navigation-section">
+            <button id="prev-btn" class="nav-button" disabled>Previous</button>
+            <select id="question-select" class="question-select"></select>
+            <button id="next-btn" class="nav-button">Next</button>
+        </div>
+
+        <div class="timer-section">
+            <div id="question-timer" class="timer">
+                Question Time: <span id="question-time"></span>
+            </div>
+            <div id="explanation-timer" class="timer hidden">
+                Explanation Time: <span id="explanation-time"></span>
+            </div>
+        </div>
+
+        <div id="question-container" class="question-container"></div>
+
+        <div class="footer">
+            <p>© 2023 SM01 Quiz</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
